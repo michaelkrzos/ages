@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C0E3B0D1BDC005D004A1F7A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0E3B0C1BDC005D004A1F7A /* Extensions.swift */; };
 		4CD89D971B912E9F00C52E18 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD89D961B912E9F00C52E18 /* AppDelegate.swift */; };
 		4CD89D991B912E9F00C52E18 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD89D981B912E9F00C52E18 /* ViewController.swift */; };
 		4CD89D9C1B912E9F00C52E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4CD89D9A1B912E9F00C52E18 /* Main.storyboard */; };
 		4CD89D9E1B912E9F00C52E18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD89D9D1B912E9F00C52E18 /* Images.xcassets */; };
 		4CD89DA11B912E9F00C52E18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CD89D9F1B912E9F00C52E18 /* LaunchScreen.xib */; };
 		4CD89DAD1B912E9F00C52E18 /* AgesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD89DAC1B912E9F00C52E18 /* AgesTests.swift */; };
-		4CD89DB71B912F2E00C52E18 /* ChronologyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD89DB61B912F2E00C52E18 /* ChronologyModel.swift */; };
+		4CD89DB71B912F2E00C52E18 /* ChronologiesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD89DB61B912F2E00C52E18 /* ChronologiesModel.swift */; };
 		4CD89DB91B912FCC00C52E18 /* Chronology.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD89DB81B912FCC00C52E18 /* Chronology.swift */; };
 		4CD89DBF1B92353A00C52E18 /* ChronologiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD89DBE1B92353A00C52E18 /* ChronologiesView.swift */; };
 /* End PBXBuildFile section */
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4C0E3B0C1BDC005D004A1F7A /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		4CD89D911B912E9F00C52E18 /* Ages.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ages.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD89D951B912E9F00C52E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD89D961B912E9F00C52E18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +41,7 @@
 		4CD89DA61B912E9F00C52E18 /* AgesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD89DAB1B912E9F00C52E18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4CD89DAC1B912E9F00C52E18 /* AgesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgesTests.swift; sourceTree = "<group>"; };
-		4CD89DB61B912F2E00C52E18 /* ChronologyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronologyModel.swift; sourceTree = "<group>"; };
+		4CD89DB61B912F2E00C52E18 /* ChronologiesModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronologiesModel.swift; sourceTree = "<group>"; };
 		4CD89DB81B912FCC00C52E18 /* Chronology.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chronology.swift; sourceTree = "<group>"; };
 		4CD89DBE1B92353A00C52E18 /* ChronologiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChronologiesView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,9 +91,10 @@
 				4CD89D9D1B912E9F00C52E18 /* Images.xcassets */,
 				4CD89D9F1B912E9F00C52E18 /* LaunchScreen.xib */,
 				4CD89D941B912E9F00C52E18 /* Supporting Files */,
-				4CD89DB61B912F2E00C52E18 /* ChronologyModel.swift */,
 				4CD89DB81B912FCC00C52E18 /* Chronology.swift */,
+				4CD89DB61B912F2E00C52E18 /* ChronologiesModel.swift */,
 				4CD89DBE1B92353A00C52E18 /* ChronologiesView.swift */,
+				4C0E3B0C1BDC005D004A1F7A /* Extensions.swift */,
 			);
 			path = Ages;
 			sourceTree = "<group>";
@@ -223,7 +226,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD89DBF1B92353A00C52E18 /* ChronologiesView.swift in Sources */,
-				4CD89DB71B912F2E00C52E18 /* ChronologyModel.swift in Sources */,
+				4C0E3B0D1BDC005D004A1F7A /* Extensions.swift in Sources */,
+				4CD89DB71B912F2E00C52E18 /* ChronologiesModel.swift in Sources */,
 				4CD89DB91B912FCC00C52E18 /* Chronology.swift in Sources */,
 				4CD89D991B912E9F00C52E18 /* ViewController.swift in Sources */,
 				4CD89D971B912E9F00C52E18 /* AppDelegate.swift in Sources */,

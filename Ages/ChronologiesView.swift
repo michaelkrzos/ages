@@ -9,14 +9,21 @@
 import UIKit
 
 class ChronologiesView: UIView {
-
-    var viewHeight:CGFloat = 0.0
     
-    let chronologies = ChronologyModel()
+    let chronologies = ChronologiesModel()
+    
     
     var height: CGFloat {
 
-        return CGFloat(chronologies.timeSpans.count) * CGFloat(120.0) + CGFloat(50)
+        get {
+            var viewHeight: Double = 0.0
+            
+            for chronology in chronologies.timeSpans {
+                viewHeight += chronology.height
+            }
+            
+            return CGFloat(viewHeight + 20)
+        }
     }
 
     // Only override drawRect: if you perform custom drawing.
@@ -24,38 +31,32 @@ class ChronologiesView: UIView {
     override func drawRect(rect: CGRect) {
         // Drawing code
         
-       // _ = UIGraphicsGetCurrentContext()
-        //CGContextSetLineWidth(context, 2.0)
+        var ageTop: CGFloat = 20
         
-        //let colorSpace = CGColorSpaceCreateDeviceRGB()
-        //let components: [CGFloat] = [0.0, 0.0, 1.0, 1.0]
-        //let color = CGColorCreate(colorSpace, components)
-        //CGContextSetStrokeColorWithColor(context, color)
-//        backgroundColor = UIColor.whiteColor()
-        
-        var counter: CGFloat = 50;
+        self.backgroundColor = UIColor.whiteColor()
         
         for chronology in chronologies.timeSpans
         {
-            let ageView = UIView(frame: CGRect(x: 20, y: counter, width: 340, height: 100))
-            ageView.backgroundColor = UIColor.blueColor()
-            ageView.layer.cornerRadius = 10.0
-            ageView.clipsToBounds = true
+            let ageView = UIView(frame: CGRect(x: 0, y: ageTop, width:  UIScreen.mainScreen().applicationFrame.size.width, height: CGFloat(chronology.height)))
             
-            let textField = UILabel(frame: CGRect(x: 60, y: 20, width: 100, height: 50))
+            ageView.backgroundColor = chronology.color
+        //    ageView.layer.borderColor = UIColor.blackColor().CGColor
+
+            //ageView.layer.borderWidth = 1.0
+            // ageView.layer.cornerRadius = 10.0
+//            ageView.clipsToBounds = true
+            
+            let ageName = UILabel(frame: CGRect(x: 10, y: 5, width: 150, height: 50))
 //            textField.borderStyle = UITextBorderStyle.Bezel
-            textField.textColor = UIColor.whiteColor()
-            textField.text = chronology.name
-//            textField.font = UIFont(descriptor: UIFontDescriptor(, size: <#T##CGFloat#>)
-            ageView.addSubview(textField)
+            ageName.textColor = UIColor.blackColor()
+            ageName.text = chronology.name
+            ageName.font = UIFont.preferredFontForTextStyle(UIFontTextStyleHeadline)
+            
+            ageView.addSubview(ageName)
             
             addSubview(ageView)
 
-//            CGContextMoveToPoint(context, counter, 30)
-  //          CGContextAddLineToPoint(context, 3000, 3400)
-            
-    //        CGContextStrokePath(context)
-            counter += 120
+            ageTop += CGFloat(chronology.height)
         }
     }
 }

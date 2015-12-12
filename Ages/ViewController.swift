@@ -18,27 +18,14 @@ class ViewController: UIViewController  {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+      //  self.view.backgroundColor = UIColor.whiteColor()
+        
         // Set up the container view to hold your custom view hierarchy
         chronologiesView = ChronologiesView()
         let containerSize = CGSize(width: UIScreen.mainScreen().bounds.size.width, height: chronologiesView.height)
-     //   let containerSize = CGSize(width: UIScreen.mainScreen().bounds.size.width, height: UIScreen.mainScreen().bounds.height)
 
         chronologiesView.frame = CGRect(origin: CGPoint(x: 0,y: 0), size: containerSize)
         scrollView.addSubview(chronologiesView)
-        
-        // Set up your custom view hierarchy
-//        let redView = UIView(frame: CGRect(x: 0, y: 0, width: 640, height: 280))
-//        redView.backgroundColor = UIColor.redColor();
-//        containerView.addSubview(redView)
-        
-//        let blueView = UIView(frame: CGRect(x: 0, y: 560, width: 640, height: 80))
-//        blueView.backgroundColor = UIColor.blueColor();
-//        containerView.addSubview(blueView)
-//        
-//        let greenView = UIView(frame: CGRect(x: 160, y: 160, width: 320, height: 320))
-//        greenView.backgroundColor = UIColor.greenColor();
-//        containerView.addSubview(greenView)
-//
         
         // Tell the scroll view the size of the contents
         scrollView.contentSize = chronologiesView.bounds.size;
